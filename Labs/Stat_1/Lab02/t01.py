@@ -1,7 +1,7 @@
 # True або False
 
-n = 67
-# n = int(input("n = "))
+# n = 67
+n = int(input("n = "))
 
 condition_a = n % 2 == 0
 print("a)", condition_a)
