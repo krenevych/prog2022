@@ -1,4 +1,4 @@
-n = 76
+n = 73
 
 condition_a = n % 2 == 0
 print("a)", condition_a)
