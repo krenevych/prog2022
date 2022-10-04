@@ -17,7 +17,7 @@ if cond1: # перевірка, що лежить на прямій
     x_AB = x2 - x1
     y_AB = y2 - y1
 
-    dot_AC_AB = x_AC * x_AB + y_AC * y_AB
+    dot_AC_AB = x_AC * x_AB + y_AC * y_AB # скалярний добуток векторів АС і BC
 
     if dot_AC_AB >= 0:    # перевірка, що на промені
         print("YES")
