@@ -26,13 +26,15 @@ if cond1: # перевірка, що лежить на прямій
 
     if dot_AC_AB >= 0:    # перевірка, що на промені
         print("YES")
+        if AC <= AB : # відрізку
+            print("YES")
+        else:
+            print("NO")
     else:
+        print("NO")
         print("NO")
 
-    if AC + BC == AB: # або відрізку
-        print("YES")
-    else:
-        print("NO")
+
 else:
     print("NO")
     print("NO")
