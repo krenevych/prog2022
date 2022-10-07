@@ -14,7 +14,7 @@ k = 0
 nm = 0
 while k < n:
     k += 1
-    nm += 3
+    nm += m
 
 print(nm)
 
