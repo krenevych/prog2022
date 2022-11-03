@@ -5,10 +5,18 @@ def isPrime(k):
     return True
 
 def isSquare(k):
+    root = k ** 0.5
+    if int(root + 0.5) ** 2 == k:
+        return True
     return False
 
 def isPow5(k):
-    return False
+    # 1, 5, 25, 125, 625,
+    while k > 1:
+        if k % 5 != 0:
+            return False
+        k = k // 5
+    return True
 
 ######### Main #############
 squares = []
