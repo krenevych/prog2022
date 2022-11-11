@@ -15,6 +15,6 @@ def Fact(n):
         return 1
     else:
         return Fact(n-1) * n
-    
+
 f = Fact(5)
 print(f)
