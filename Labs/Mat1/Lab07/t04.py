@@ -5,15 +5,16 @@
 #  3 %  0  ...
 
 
-def nsd(n, m):
+def func(n, m):
     if n < m:
-        n, m = m, n
+        return func(m, n)
 
-    while m > 0:
-        n, m = m, n % m
-    return n
+    if m == 0:
+        return n
+
+    return func(m, n % m)
 
 
 ######### Main #########
 a, b = [int(el) for el in input().split()]
-print(nsd(a, b))
+print(func(a, b))
