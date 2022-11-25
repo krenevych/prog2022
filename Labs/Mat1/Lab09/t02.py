@@ -19,3 +19,4 @@ for key, val in freq.items():
         break
 else:
     print(-1)
+
