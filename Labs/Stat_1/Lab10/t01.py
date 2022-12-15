@@ -27,6 +27,8 @@ def writeMatrix(M, pattern="%5d"):
         print()
 
 ########### main ##############
+########### main ##############
+########### main ##############
 n = int(input())
 M = readMatrix(n)
 # writeMatrix(M, "%8.2f")
