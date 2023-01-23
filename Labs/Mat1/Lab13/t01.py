@@ -3,6 +3,7 @@ def readFile(fileName):
         for line in f:
             print(line.strip())
 
+
 def readFile60(fileName):
     with open(fileName, encoding="utf-8") as f:
         for line in f:
@@ -11,6 +12,15 @@ def readFile60(fileName):
                 print(line)
 
 
+def countEmpty(fileName):
+    counter = 0
+    with open(fileName, encoding="utf-8") as f:
+        for line in f:
+            line = line.strip()
+            if len(line) == 0:
+                counter += 1
+    return counter
+
 
 if __name__ == '__main__':
-    readFile60("input01.txt")
+    print(countEmpty("input01.txt"))
