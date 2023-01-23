@@ -22,5 +22,15 @@ def countEmpty(fileName):
     return counter
 
 
+def find_the_longest_line(fileName):
+    longest_line = ""
+    with open(fileName, encoding = "utf-8") as f:
+        for line in f:
+            line = line.strip()
+            if len(line) >= len(longest_line):
+                longest_line = line
+    return longest_line
+
+
 if __name__ == '__main__':
-    print(countEmpty("input01.txt"))
+    print(find_the_longest_line("input01.txt"))
