@@ -1,0 +1,3 @@
+raise IndexError
+
+print("Hello!")
