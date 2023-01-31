@@ -15,3 +15,12 @@ try:
 except AssertionError as as_err:
     print(as_err)
 
+
+# if a + b > c and a + c > b and b + c > a:
+#     p = (a + b + c) / 2.0
+#     s = p * (p - a) * (p - b) * (p - c)
+#     s = s ** 0.5
+#     print(f"Площа трикутника зі сторонами {a}, {b}, {c} = {s}")
+# else:
+#     print("Такого трикутника не існує")
+
