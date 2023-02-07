@@ -6,7 +6,10 @@ class QuadraticEquation:
         self.c = c
 
     def show(self):
-        print(f"{self.a} x**2 + {self.b}x + {self.c} = 0")
+        print(self)
+
+    def __str__(self):
+        return f"{self.a} x**2 + {self.b}x + {self.c} = 0"
 
     def discriminant(self):
         return self.b ** 2 - 4 * self.a * self.c
@@ -33,27 +36,27 @@ class QuadraticEquation:
                 return x1, x2
 
 
-############## - MAIN - ########################
-eq1 = QuadraticEquation(1, 4, 14)
-eq1.show()
-print("solutions = ", eq1.solutions())
+if __name__ == '__main__':
+    eq1 = QuadraticEquation(1, 4, 14)
+    print(eq1)
+    print("solutions = ", eq1.solutions())
 
-eq2 = QuadraticEquation(1, 4, 4)
-eq2.show()
-print("solutions = ", eq2.solutions())
+    eq2 = QuadraticEquation(1, 4, 4)
+    print(eq2)
+    print("solutions = ", eq2.solutions())
 
-eq3 = QuadraticEquation(1, -3, 2)
-eq3.show()
-print("solutions = ", eq3.solutions())
+    eq3 = QuadraticEquation(1, -3, 2)
+    eq3.show()
+    print("solutions = ", eq3.solutions())
 
-lin_eq1 = QuadraticEquation(0, -3, 2)
-lin_eq1.show()
-print("solutions = ", lin_eq1.solutions())
+    lin_eq1 = QuadraticEquation(0, -3, 2)
+    lin_eq1.show()
+    print("solutions = ", lin_eq1.solutions())
 
-lin_eq2 = QuadraticEquation(0, 0, 2)
-lin_eq2.show()
-print("solutions = ", lin_eq2.solutions())
+    lin_eq2 = QuadraticEquation(0, 0, 2)
+    lin_eq2.show()
+    print("solutions = ", lin_eq2.solutions())
 
-lin_eq3 = QuadraticEquation(0, 0, 0)
-lin_eq3.show()
-print("solutions = ", lin_eq3.solutions())
+    lin_eq3 = QuadraticEquation(0, 0, 0)
+    lin_eq3.show()
+    print("solutions = ", lin_eq3.solutions())
