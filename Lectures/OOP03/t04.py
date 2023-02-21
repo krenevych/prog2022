@@ -27,7 +27,7 @@ if __name__ == '__main__':
     t1 = Triangle(32, 42, 55)
 
     piram = TrianglePiramid(3, 4, 5, 12)
-    piram.a
+
 
 
 
