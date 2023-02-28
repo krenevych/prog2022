@@ -12,12 +12,12 @@ class Equation:
     def solve(self):
         # b != 0 => x = -c / b
         if self._b != 0:
-            return [-self._c / self._b]
+            return -self._c / self._b,
         # b = 0:
         elif self._c == 0:  # c = 0 => 0 = 0 => inf
             return Equation.INF
         else:  # c != 0 => 3 = 0 => розв'язків немає
-            return []
+            return ()
 
     def show(self):
         print(self)
