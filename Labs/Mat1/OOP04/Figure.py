@@ -25,6 +25,10 @@ class Figure:
         # raise NotImplementedError("Method _draw is not implemented!")  # FIXME: породжувати помилку, коли намагаємося створити екземпляр класа Figure і викликати метод _draw
         pass
 
+    def _move(self, dx, dy):
+        self._x += dx
+        self._y += dy
+
     def show(self):
         """ Зображує фігуру на екрані """
         if not self._visible:
@@ -47,8 +51,7 @@ class Figure:
         isVisible = self._visible
         if isVisible:
             self.hide()
-        self._x += dx
-        self._y += dy
+        self._move(dx, dy)
         if isVisible:
             self.show()
 
