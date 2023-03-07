@@ -110,15 +110,9 @@ class Quadrate(Figure):
         setpos(self._x, self._y)
         setheading(0)
         down()
-        forward(self._a)
-        left(90)
-        forward(self._a)
-        left(90)
-        forward(self._a)
-        left(90)
-        forward(self._a)
-        left(90)
-
+        for i in range(4):
+            forward(self._a)
+            left(90)
         up()
 
 #################### клас Triangle  ############################
@@ -141,13 +135,21 @@ class Triangle(Figure):
         """
 
         super().__init__(x, y, color)  # виклик конструктора базового класу
-        pass # TODO: опишіть поля, що притаманні класу
+        self._a = a
 
     def _draw(self, color):
         """ Допоміжний віртуальний метод, що зображує трикутник заданим кольором
         :param color: колір
         """
-        pass  # TODO: реалізуйте тут метод _draw оголошений у базовому класі
+        up()
+        setpos(self._x, self._y)
+        pencolor(color)
+        setheading(0)
+        down()
+        for i in range(3):
+            forward(self._a)
+            left(120)
+        up()
 
 #################### клас Trapezoid  ###########################
 ################################################################
@@ -198,13 +200,24 @@ class Rectangle(Figure):
         :param color: колір прямокутника
         """
         super().__init__(x, y, color)  # виклик конструктора базового класу
-        pass  # TODO: опишіть поля, що притаманні класу
+        self._a = a
+        self._b = b
 
     def _draw(self, color):
         """ Віртуальний метод, що зображує прямокутник на екрані заданим кольором
         :param color: колір
         """
-        pass  # TODO: реалізуйте тут метод _draw оголошений у базовому класі
+        pencolor(color)
+        up()
+        setpos(self._x, self._y)
+        setheading(0)
+        down()
+        for i in range(2):
+            forward(self._a)
+            left(90)
+            forward(self._b)
+            left(90)
+        up()
 
 
 ################################################################
